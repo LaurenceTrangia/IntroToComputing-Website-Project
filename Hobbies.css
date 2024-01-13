@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #f3d7ca;
+  --primary-color-dark: #e6a4b4;
+  --secondary-color: #0b0801;
+  --text-dark: #1f2937;
+  --text-light: #f4f6f9;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.logo2{
+    width: 60px;
+}
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: montserrat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-color: var(--primary-color-dark);
+  width: 100%;
+
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: var(--primary-color);
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo2{
+    width: 45px;
+}
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+  h3{
+    color: var(--text-light);
+    margin: 10px 10% 0 10%;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    
+  }
+.hobbies{  
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+  
+ 
+  }
+  #theband{
+    margin-top: 100px;
+    margin-left: 370px;
+    border: 2px solid #ffffff;
+  }
+  @media only screen and (max-width: 767px) {
+    #theband{
+      margin-left: 0;
+    }
+  }
+  @media (width < 750px) {
+    nav .checkbox {
+      display: block;
+    }
+  
+    ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 85px);
+      left: -100%;
+      top: 85px;
+      background-color: var(--extra-light);
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+  
+    nav #check:checked ~ ul {
+      left: 0;
+    }
+  
+    ul li a {
+      font-size: 1.25rem;
+    }
+    h3{
+      margin: auto;
+    }
+    img{
+      margin: auto;
+    }
+    .section__container {
+      padding: 10rem 1rem 5rem 1rem;
+      text-align: center;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .action__btns {
+      margin: auto;
+    }
+    .hobbies{  
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+    
+   
+    }
+  
+  }
